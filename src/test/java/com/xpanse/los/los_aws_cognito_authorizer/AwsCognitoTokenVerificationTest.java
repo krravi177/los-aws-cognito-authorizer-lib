@@ -1,0 +1,22 @@
+package com.xpanse.los.los_aws_cognito_authorizer;
+
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Map;
+
+import org.junit.Test;
+
+/** Unit Test class AwsCognitoTokenVerificationTest */
+public class AwsCognitoTokenVerificationTest {
+
+	/** Unit Test Verify Token */
+	@Test
+	public void verifyTokenTest() {
+		final String token = "eyJraWQiOiI1bkdWMm95ZXhDYjllNHpvbjZORWhQZUpaTXJSZHRMV0VrWFdXV2dWbSs0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2NGM4NjQwOC1mMDcxLTcwNTItNjlmMi0wODkzMDQ4ZjRlN2YiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV81Nm9OeFVxY2QiLCJjbGllbnRfaWQiOiI1N2Y5NjFjNjIydThhdHQzOG9nbHVsNmVxYyIsIm9yaWdpbl9qdGkiOiIwY2Y0YWE2Ny1hOWZhLTQ4MzQtYTViMS05NmM4MDY2YTFlZGQiLCJldmVudF9pZCI6IjJmODE3ODA5LTJmYmMtNGFmMS04NjdjLTRkODQ1MDM3OWE5YiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MjQ2NTA3NTgsImV4cCI6MTcyNDY1NDM1OCwiaWF0IjoxNzI0NjUwNzU4LCJqdGkiOiJmMDYwYTQ1Ni1jNGQyLTQwNzUtODQ4Ny00YWI1MDUxZDJiNGYiLCJ1c2VybmFtZSI6InJwb21hbCJ9.OR9M63H6ceoTJ0zKJmLL6gUO887cUHMYV3EjGpYXmvtc4w2YtvdiZanVxcjFIpMAJTYTSYcEnmcmXBmGwCM07YR8_sc_5kLd6dvbT7DmjGC27CqXTbXTpA2039jI0d8nJVGYvrX_TIIVXW_4O3ARAjxjiVw9Y3Xa-L0scnjJqQEVGIdzKq2VaVKVkd0i-sX7e2WnWfBHCcsPEONi7ALvhCijw1FUcQJxsNpFGySQyN1_xXC5ad4nB9TR6J8V14s6-l6ptv5NPXOlYEkpcOmIHDqrX2vf1iXVVbyZIAz2vwwNe9AO0qypq4s1vOatoztcb8ZLQLjgKpZaAhJ41b8-zg";
+		final Map<String, Object> vResponse = new AwsCognitoTokenVerification().verifyToken(token, "us-east-1",
+				"us-east-1_56oNxUqcd");
+
+		assertNotNull("response is null", vResponse);
+	}
+
+}
